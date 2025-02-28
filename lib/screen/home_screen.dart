@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:filmalya2/models/movie.dart';
 import 'package:filmalya2/services/api_service.dart';
+import 'package:filmalya2/screen/detail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -53,7 +54,13 @@ class _HomeScreenState extends State<HomeScreen> {
             itemBuilder: (BuildContext context, int index) {
               final Movie movie = movies[index];
               return GestureDetector(
-                onTap: () {},
+                onTap:
+                    () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DetailScreen(movie: movie),
+                      ),
+                    ),
                 child: Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Column(
