@@ -54,13 +54,12 @@ class _HomeScreenState extends State<HomeScreen> {
             itemBuilder: (BuildContext context, int index) {
               final Movie movie = movies[index];
               return GestureDetector(
-                onTap:
-                    () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => DetailScreen(movie: movie),
-                      ),
-                    ),
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailScreen(movie: movie),
+                  ),
+                ),
                 child: Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Column(
@@ -92,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Pilem')),
+      appBar: AppBar(title: Text('FILM')),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
